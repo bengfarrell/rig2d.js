@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="rig.css" />
+        <script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/Skeleton.js"></script>
+        <script type="text/javascript" src="js/JointDragger.js"></script>
+        <script type="text/javascript">
+            $(document).ready( function() {
+                var skl = new Skeleton();
+                var drg = new JointDragger();
+
+                console.log( $(".bone.left.knee-foot").offset().top );
+                window.addEventListener(JointDragger.prototype.JOINT_MOVED, skl.draw);
+                drg.init();
+                skl.draw();
+                console.log( $(".bone.left.knee-foot").offset().top );
+                skl.draw()
+                console.log( $(".bone.left.knee-foot").offset().top );
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- JOINTS -->
+            <!--- ARMS --->
+            <div class="joint hand left"></div>
+            <div class="joint hand right"></div>
+
+            <div class="joint elbow left"></div>
+            <div class="joint elbow right"></div>
+
+            <div class="joint shoulder left"></div>
+            <div class="joint shoulder right"></div>
+
+            <!--- LEGS --->
+            <div class="joint hip left"></div>
+            <div class="joint hip right"></div>
+
+            <div class="joint knee left"></div>
+            <div class="joint knee right"></div>
+
+            <div class="joint foot left"></div>
+            <div class="joint foot right"></div>
+
+            <!--- BODY/SPINE --->
+            <div class="joint center"></div>
+            <div class="joint head"></div>
+            <div class="joint neck"></div>
+            <div class="joint pelvis"></div>
+        <!--- END JOINTS --->
+
+
+        <!--- BONES --->
+            <!--- ARMS --->
+            <div class="bone left hand-elbow"></div>
+            <div class="bone left shoulder-elbow"></div>
+            <div class="bone left neck-shoulder"></div>
+            <div class="bone right hand-elbow"></div>
+            <div class="bone right shoulder-elbow"></div>
+            <div class="bone right neck-shoulder"></div>
+
+            <!--- LEGS --->
+            <div class="bone left knee-foot"></div>
+            <div class="bone left hip-knee"></div>
+            <div class="bone left pelvis-hip"></div>
+            <div class="bone right knee-foot"></div>
+            <div class="bone right hip-knee"></div>
+            <div class="bone right pelvis-hip"></div>
+
+            <!--- BODY/SPINE --->
+            <div class="bone head-neck"></div>
+            <div class="bone neck-center"></div>
+            <div class="bone pelvis-center"></div>
+
+        <!--- END BONES --->
+
+
+    </body>
+</html>

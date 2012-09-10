@@ -1,0 +1,115 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.joint {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #ff0000;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.bone {
+    width: 2px;
+    background-color: #000000;
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 50% 50%;
+    z-index: -9999;
+}
+
+.joint:hover {
+    cursor:pointer;
+}
+
+.joint:active {
+    cursor:pointer;
+}
+
+.joint.head {
+    top: 10px;
+    left: 200px;
+}
+
+.joint.neck {
+    top: 60px;
+    left: 200px;
+}
+
+.joint.center {
+    top: 150px;
+    left: 200px;
+}
+
+.joint.pelvis {
+    top: 180px;
+    left: 200px;
+}
+
+.joint.hand.left {
+    top: 200px;
+    left: 50px;
+}
+
+.joint.hand.right {
+    top: 200px;
+    left: 350px;
+}
+
+.joint.elbow.left {
+    top: 120px;
+    left: 90px;
+}
+
+.joint.elbow.right {
+    top: 120px;
+    left: 310px;
+}
+
+.joint.shoulder.left {
+    top: 75px;
+    left: 150px;
+}
+
+.joint.shoulder.right {
+    top: 75px;
+    left: 250px;
+}
+
+.joint.hip.left {
+    top: 200px;
+    left: 160px;
+}
+
+.joint.hip.right {
+    top: 200px;
+    left: 240px;
+}
+
+.joint.knee.left {
+    top: 260px;
+    left: 160px;
+}
+
+.joint.knee.right {
+    top: 260px;
+    left: 240px;
+}
+
+.joint.foot.left {
+    top: 400px;
+    left: 150px;
+}
+
+.joint.foot.right {
+    top: 400px;
+    left: 250px;
+}

@@ -1,0 +1,31 @@
+<project name="Asset ANT Build" default="init" basedir=".">
+	<description>
+		Rig2D.js
+	</description>
+
+	<taskdef name="jscomp"
+		classname="com.google.javascript.jscomp.ant.CompileTask"
+		classpath="/usr/share/closure/compiler.jar"/>
+
+	<target
+		name="compile"
+		description="Google Closure">
+		<jscomp
+			compilationLevel="whitespace"
+			warning="verbose" 
+	        debug="true"
+			output="rig2d.js">
+	        <sources refid="dependencies"/>
+			<sources refid="app"/>
+		</jscomp>
+    </target>
+
+    <filelist dir="js/libs" id="dependencies">
+        <file name="jquery-1.7.2.min.js"/>
+	</filelist>
+	
+	<filelist dir="js" id="app">
+        <file name="JointDragger.js"/>
+        <file name="Skeleton.js"/>
+	</filelist>
+</project>
